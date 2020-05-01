@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
+import { Contenedor } from "./StyledComponents/Contenedor";
+import { Imagen } from "./StyledComponents/Imagen";
+import { Heading } from "./StyledComponents/Heading";
 function App() {
+  const imagen =
+    "https://www.ecestaticos.com/imagestatic/clipping/fa1/b77/fa1b77b9eefa0af4ea63602067029ecc/el-coronavirus-arrasa-el-paraiso-suizo-de-las-criptomonedas-este-es-su-plan-de-rescate.jpg?mtime=1588027452";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Contenedor>
+      <div>
+        <Imagen src={imagen} alt="Imagen Cripto" />
+      </div>
+      <div>
+        <Heading>Cotiza criptomonedas al instante</Heading>
+      </div>
+    </Contenedor>
   );
 }
 
