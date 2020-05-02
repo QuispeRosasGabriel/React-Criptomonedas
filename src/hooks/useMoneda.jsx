@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from "react";
+import { Label } from "../StyledComponents/Label";
+import { Select } from "../StyledComponents/Select";
 
 const useMoneda = (label, stateInicial, opciones) => {
   // state de custom hook
@@ -6,8 +8,8 @@ const useMoneda = (label, stateInicial, opciones) => {
 
   const Seleccionar = () => (
     <Fragment>
-      <label htmlFor="">{label}</label>
-      <select
+      <Label htmlFor="">{label}</Label>
+      <Select
         name=""
         id=""
         value={state}
@@ -19,7 +21,7 @@ const useMoneda = (label, stateInicial, opciones) => {
             {opcion.nombre}
           </option>
         ))}
-      </select>
+      </Select>
     </Fragment>
   );
   //retornando valores del hook
