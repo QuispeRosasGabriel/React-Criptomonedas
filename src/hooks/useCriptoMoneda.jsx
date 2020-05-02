@@ -3,6 +3,8 @@ import { Label } from "../StyledComponents/Label";
 import { Select } from "../StyledComponents/Select";
 
 const useCriptoMoneda = (label, stateInicial, opciones) => {
+  console.log(opciones);
+
   //state de custom hook
   const [state, actualizarState] = useState(stateInicial);
   const SelectCripto = () => {
@@ -11,6 +13,11 @@ const useCriptoMoneda = (label, stateInicial, opciones) => {
         <Label>{label}</Label>
         <Select value={state} onChange={(e) => actualizarState(e.target.value)}>
           <option value="">--Seleccionar</option>
+          {opciones.map((opcion) => (
+            <option key={opcion.CoinInfo.Id} value={opcion.CoinInfo.Name}>
+              {opcion.CoinInfo.FullName}
+            </option>
+          ))}
         </Select>
       </Fragment>
     );
