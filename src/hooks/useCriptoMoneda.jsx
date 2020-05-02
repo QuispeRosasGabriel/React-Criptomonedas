@@ -3,8 +3,6 @@ import { Label } from "../StyledComponents/Label";
 import { Select } from "../StyledComponents/Select";
 
 const useCriptoMoneda = (label, stateInicial, opciones) => {
-  console.log(opciones);
-
   //state de custom hook
   const [state, actualizarState] = useState(stateInicial);
   const SelectCripto = () => {

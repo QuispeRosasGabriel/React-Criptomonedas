@@ -4,7 +4,7 @@ import useMoneda from "../hooks/useMoneda";
 import useCriptoMoneda from "../hooks/useCriptoMoneda";
 import axios from "axios";
 import Error from "./Error";
-const Formulario = () => {
+const Formulario = ({ guardarCriptoMoneda, guardarMoneda }) => {
   //state de listado
   const [listaCripto, guardarCriptomonedas] = useState([]);
   const [error, guardarError] = useState(false);
@@ -50,6 +50,8 @@ const Formulario = () => {
     }
     //pasar los datos al componente principal
     guardarError(false);
+    guardarMoneda(moneda);
+    guardarCriptoMoneda(criptomoneda);
   };
 
   return (
